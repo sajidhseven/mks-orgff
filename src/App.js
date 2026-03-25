@@ -32,7 +32,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import KannadaContactDetails from "./components/KannadaContactDetails";
 
 
-import "./style.css";
+import "./mksStyle.css";
 
 const ScrollToTopOnNavigate = () => {
   const { pathname } = useLocation();
