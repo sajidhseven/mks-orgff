@@ -1,5 +1,5 @@
 import React from 'react';
-import './../style.css';
+import './../mksStyle.css';
 
 const Comittee = () => {
     const officeBearers = [
