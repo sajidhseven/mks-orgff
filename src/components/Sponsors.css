@@ -1,0 +1,133 @@
+/* Sponsors Page Styles */
+
+.sponsors-page {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f5efe6, #efe6d8);
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.sponsors-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.sponsors-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.sponsors-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.sponsors-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.sponsors-hero-title {
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: spFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes spFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= CONTENT MARQUEES ================= */
+/* Leveraging identical CSS blocks directly from style.css for 1:1 matching */
+
+.sponsors-marquee-section {
+    padding-top: 60px;
+}
+
+@media screen and (max-width: 480px) {
+    .sponsors-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+}
+
+/* ================= VIDEO SECTION ================= */
+
+.sponsors-video-section.no-title {
+    padding-top: 80px;
+}
+
+.sponsors-video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sponsor-video-card {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-video-card:hover {
+    transform: translateY(-5px);
+}
+
+.sponsor-video-player {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .sponsors-video-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
+    }
+}

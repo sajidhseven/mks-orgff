@@ -1,0 +1,489 @@
+/* About Kannada Bhavana Page Styles */
+
+.about-kannada-bhavana-page {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #971E23;
+    background: linear-gradient(to bottom, #f5efe6, #efe6d8);
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.akb-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.akb-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.akb-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+
+.akb-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.akb-hero-title {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Container */
+.akb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Sections Common */
+.akb-section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #971E23;
+    /* Deep red common in MKS theme */
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.akb-section-line {
+    width: 80px;
+    height: 4px;
+    background-color: #971E23;
+    /* Gold/Orange accent */
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+}
+
+/* Intro Text */
+.akb-text-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    border-left: 5px solid #971E23;
+}
+
+.akb-text-content p {
+    margin-bottom: 1.5rem;
+}
+
+.akb-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.akb-text-content strong {
+    color: #222;
+}
+
+/* Dream Banner Section */
+.akb-dream-banner {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin: 4rem 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.akb-dream-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.akb-dream-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    z-index: 2;
+}
+
+.akb-dream-banner-content {
+    position: relative;
+    z-index: 3;
+    text-align: left;
+    padding: 3rem;
+    color: white;
+}
+
+.akb-dream-banner-content h2 {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #971E23;
+    /* Gold/Orange accent */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.akb-dream-banner-content h1 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Projects Section */
+.akb-project-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Grid for Cards */
+.akb-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Cards */
+.akb-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.akb-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.akb-card-header {
+    background: linear-gradient(135deg, #971E23, #971E23);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.akb-card-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Lists */
+.akb-list {
+    list-style: none;
+    padding: 2rem;
+    margin: 0;
+}
+
+.akb-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: #444;
+    line-height: 1.5;
+    font-size: 1.05rem;
+}
+
+.akb-list li:last-child {
+    margin-bottom: 0;
+}
+
+.akb-list li::before {
+    content: "➔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #971E23;
+    font-weight: bold;
+}
+
+/* Project Details Badges */
+.akb-project-details {
+    background: #fff8eb;
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #fde4b8;
+}
+
+.akb-project-details h3 {
+    color: #971E23;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+.akb-details-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.akb-badge {
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.1rem;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.akb-badge:hover {
+    transform: scale(1.05);
+}
+
+.akb-badge-icon {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+.akb-badge strong {
+    margin-right: 5px;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .akb-dream-banner {
+        min-height: 300px;
+        border-radius: 12px;
+        margin: 3rem 0;
+    }
+
+    .akb-container {
+        padding: 3rem 15px;
+        gap: 3.5rem;
+    }
+
+    .akb-text-content {
+        padding: 2rem;
+        font-size: 1rem;
+    }
+
+    .akb-grid-container {
+        gap: 2rem;
+    }
+
+    .akb-list {
+        padding: 1.5rem;
+    }
+
+    .akb-project-details {
+        padding: 2rem 1rem;
+    }
+
+    .akb-badge {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .akb-dream-banner {
+        min-height: 250px;
+    }
+
+    .akb-hero {
+        height: 50vh;
+        min-height: 350px;
+    }
+
+    .akb-hero-title {
+        font-size: 2rem;
+    }
+}
+/* Gallery Section */
+.akb-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.akb-gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.akb-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.akb-gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Mobile Adjustments for Gallery */
+@media (max-width: 768px) {
+    .akb-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .akb-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Custom Modal Styling */
+.akb-custom-modal {
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark background but not a new page feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+}
+
+.akb-modal-img {
+    max-height: 85%;
+    max-width: 85%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.akb-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.akb-modal-close:hover,
+.akb-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.akb-modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.3s ease;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+.akb-modal-nav:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.akb-modal-prev {
+    left: 20px;
+}
+
+.akb-modal-next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .akb-modal-img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    .akb-modal-nav {
+        font-size: 30px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,264 @@
+.event-gallery-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5efe6;
+}
+
+/* Hero Section */
+.event-gallery-hero {
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ugadi-hero {
+    background-image: url('https://mks.org.au/wp-content/uploads/2026/02/IMG_7099.jpg');
+}
+
+.event-gallery-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.event-gallery-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.event-gallery-hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Section */
+.event-gallery-grid-section {
+    padding: 80px 0;
+}
+
+.event-gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.event-gallery-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.event-grid-title {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.event-grid-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #971E23;
+}
+
+.event-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.event-gallery-item {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.event-gallery-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.event-gallery-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-gallery-item:hover .event-gallery-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.event-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.event-lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.event-lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.event-lightbox-close:hover {
+    color: #ff9800;
+}
+
+.event-lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.event-lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.event-lightbox-nav.prev {
+    left: -70px;
+}
+
+.event-lightbox-nav.next {
+    right: -70px;
+}
+
+.event-lightbox-caption {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+.fade-up {
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .event-gallery-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .event-grid-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-gallery-hero {
+        height: 40vh;
+    }
+    .event-gallery-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .event-grid-title {
+        font-size: 1.5rem;
+    }
+    .event-gallery-grid-section {
+        padding: 50px 0;
+    }
+    .event-lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    .event-lightbox-nav.prev {
+        left: -10px;
+        background: rgba(0,0,0,0.5);
+    }
+    .event-lightbox-nav.next {
+        right: -10px;
+        background: rgba(0,0,0,0.5);
+    }
+    .event-lightbox-overlay {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-gallery-hero-content h1 {
+        font-size: 1.5rem;
+    }
+}

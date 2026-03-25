@@ -1,0 +1,139 @@
+/* About Page Lightbox Styles */
+.about-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: zoom-out;
+}
+
+.about-lightbox-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.about-lightbox-img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    cursor: default;
+    animation: popup 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.about-lightbox-close {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.about-lightbox-close:hover {
+    color: #971e23;
+}
+
+/* Responsive Grid and Cards for About Page */
+.events-section {
+    padding: 60px 0;
+}
+
+.events-wrapper {
+    max-width: 1500px; /* Further increased for even bigger cards on large screens */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Ensure 2x2 grid on desktop, 1440px, and tablets down to 600px */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; /* Increased gap for better spacing on large screens */
+}
+
+.event-card {
+    background: #fdfdfd;
+    padding: 25px; /* Increased from 20px */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* Increased from 400px */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px; /* Increased from 20px */
+}
+
+.card-title {
+    font-size: 1.6rem; /* Increased slightly */
+    color: #1a1a1a;
+    font-weight: 700;
+    margin: 0;
+}
+
+@media (max-width: 600px) { /* Changed from 768px to keep 2x2 grid longer */
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-lightbox-close {
+        top: -40px;
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .events-section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-wrapper {
+        padding: 0 15px;
+    }
+    
+    .event-card {
+        padding: 15px;
+    }
+}

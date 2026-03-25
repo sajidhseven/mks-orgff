@@ -1,0 +1,156 @@
+.social-media-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.social-media-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.social-media-header .title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.social-media-header .subtitle {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6; /* improved readability */
+}
+
+.facebook-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #1877F2;
+    margin: 15px auto;
+}
+
+.social-feeds-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.feed-column {
+    flex: 1 1 400px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.facebook-feed-wrapper,
+.instagram-feed-wrapper {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.instagram-feed-wrapper {
+    height: 600px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+/* Facebook iframe responsiveness relies natively on data-adapt-container-width */
+/* We just prevent horizontal overflow here */
+.facebook-feed-wrapper {
+    overflow-x: hidden;
+}
+
+.visit-btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    color: #fff;
+}
+
+.visit-btn.facebook {
+    background: #1877F2;
+}
+
+.visit-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.visit-btn i {
+    margin-right: 8px;
+}
+
+/* Custom Scrollbar for Instagram Wrapper */
+.instagram-feed-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.instagram-feed-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.instagram-feed-wrapper::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 8px;
+}
+
+.instagram-feed-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-media-section {
+        padding: 40px 0;
+    }
+    
+    .social-feeds-grid {
+        gap: 40px;
+    }
+
+    .feed-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .instagram-feed-wrapper {
+        height: 500px; /* slightly shorter on mobile for better visibility of surrounding content */
+    }
+}

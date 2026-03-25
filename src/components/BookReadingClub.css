@@ -1,0 +1,250 @@
+/* Book Reading Club Page Styles */
+
+.brc-page {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f5efe6, #efe6d8);
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.brc-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Note: Replace this background color with an actual image in the component if one is provided */
+.brc-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Defaulting to something nice or a color */
+    background-color: #5d4037;
+    /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.brc-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 2;
+}
+
+.brc-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.brc-hero-title {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Container */
+.brc-container {
+    max-width: 1000px;
+    /* slightly narrower for better reading readability */
+    margin: 0 auto;
+    padding: 5rem 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Sections Common */
+.brc-section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #971E23;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.brc-section-line {
+    width: 80px;
+    height: 4px;
+    background-color: #971E23;
+    margin: 0 auto 2.5rem;
+    border-radius: 2px;
+}
+
+/* Reading content block */
+.brc-text-content {
+    background: white;
+    padding: 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    border-top: 5px solid #971E23;
+}
+
+.brc-intro-text {
+    font-size: 1.3rem;
+    color: #971E23;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.brc-text-content p {
+    margin-bottom: 1.5rem;
+}
+
+.brc-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Meeting Details Box */
+.brc-meeting-details {
+    background-color: #fff8eb;
+    border: 1px solid #fde4b8;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.brc-meeting-details h3 {
+    color: #971E23;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #fde4b8;
+    padding-bottom: 0.8rem;
+    display: inline-block;
+}
+
+.brc-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.brc-detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.brc-icon {
+    font-size: 1.3rem;
+    min-width: 25px;
+    display: inline-block;
+}
+
+.brc-contact-info-text {
+    text-align: center;
+    margin-top: 2rem !important;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #971E23;
+}
+
+/* Contact Cards */
+.brc-contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.brc-contact-card {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #eee;
+    transition: transform 0.2s;
+}
+
+.brc-contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.brc-contact-card a {
+    color: #971E23;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.brc-contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .brc-container {
+        padding: 3rem 15px;
+    }
+
+    .brc-text-content {
+        padding: 2rem 1.5rem;
+        font-size: 1.05rem;
+    }
+
+    .brc-meeting-details {
+        padding: 1.5rem;
+    }
+
+    .brc-contact-cards {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brc-contact-card {
+        border-radius: 8px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brc-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+}

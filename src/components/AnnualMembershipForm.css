@@ -1,0 +1,365 @@
+/* Annual Membership Form Styles */
+
+.membership-page {
+    font-family: "Open Sans", "Roboto", "Segoe UI", sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f5efe6, #efe6d8);
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.mem-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mem-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.mem-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Slightly darker for better text pop */
+    z-index: 1;
+}
+
+.mem-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.mem-hero-title {
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 64px);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: memFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes memFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= CONTENT SECTION ================= */
+
+.mem-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: -40px;
+    /* Bring the form up slightly over the hero */
+    position: relative;
+    z-index: 5;
+}
+
+/* Info Box */
+.mem-info-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid #5b1c1c;
+    /* Theme Maroon */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mem-info-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.mem-info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.mem-highlight {
+    font-weight: 700;
+    color: #e67e22;
+    /* Theme orange */
+    font-size: 20px;
+}
+
+/* ================= FORM WRAPPER ================= */
+
+.mem-form-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+    margin-bottom: 40px;
+}
+
+.mem-form-title {
+    font-family: "Cinzel", "Times New Roman", serif;
+    color: #5b1c1c;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px dashed #e8dfd3;
+    padding-bottom: 20px;
+}
+
+.mem-form-group {
+    margin-bottom: 24px;
+}
+
+.mem-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.mem-col {
+    flex: 1;
+}
+
+.mem-form-wrapper label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.mem-form-wrapper input,
+.mem-form-wrapper textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.mem-form-wrapper input:focus,
+.mem-form-wrapper textarea:focus {
+    outline: none;
+    border-color: #9b7b2f;
+    /* Theme Gold */
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(155, 123, 47, 0.1);
+}
+
+.mem-form-wrapper textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Section Header in Form */
+.mem-section-subtitle {
+    font-size: 20px;
+    color: #5b1c1c;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e67e22;
+    padding-left: 12px;
+}
+
+/* Computed fee field */
+.readonly-input {
+    background: #fdfaf5 !important;
+    color: #5b1c1c;
+    font-weight: 700;
+    border-color: #d4c4a3 !important;
+    cursor: not-allowed;
+}
+
+.mem-submit-btn {
+    width: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+    background: linear-gradient(to bottom, #b08d2d, #8c6a1f);
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(176, 141, 45, 0.3);
+}
+
+.mem-submit-btn:hover {
+    background: linear-gradient(to bottom, #c9a63b, #9e7724);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(176, 141, 45, 0.4);
+}
+
+/* ================= BANK DETAILS ================= */
+
+.mem-bank-details {
+    background: #fdfaf5;
+    border: 2px dashed #9b7b2f;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+}
+
+.mem-bank-details h3 {
+    color: #5b1c1c;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.mem-bank-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.mem-bank-data {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid #e8dfd3;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.mem-bank-data:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(155, 123, 47, 0.1);
+    border-color: #d4c4a3;
+}
+
+.mem-bank-data strong {
+    flex: 0 0 140px;
+    text-align: right;
+    margin-right: 20px;
+    color: #8c6a1f;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mem-bank-data span {
+    color: #5b1c1c;
+    font-weight: 700;
+    font-size: 19px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.mem-ref {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #e8dfd3;
+    display: inline-block;
+    color: #444;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.mem-ref strong {
+    color: #b08d2d;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 768px) {
+    .mem-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .mem-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .mem-info-box {
+        padding: 25px 20px;
+    }
+
+    .mem-bank-details {
+        padding: 25px 15px;
+    }
+
+    .mem-bank-data {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .mem-bank-data strong {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 8px;
+        flex: auto;
+    }
+
+    .mem-bank-data span {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mem-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .mem-form-title {
+        font-size: 26px;
+    }
+
+    .mem-info-box p {
+        font-size: 16px;
+    }
+}
